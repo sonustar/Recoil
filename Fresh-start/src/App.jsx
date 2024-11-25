@@ -95,7 +95,8 @@ function Item({data}){
 
   return(
     <>
-        
+        <Suspense fallback={<Loading/>}>
+
 
          <div>
           {todo.map((todo)=>(
@@ -107,12 +108,16 @@ function Item({data}){
             ))}
          </div>
     
+        </Suspense>
           
     
     </>
   )
 }
 
+function Loading() {
+  return <h2>🌀 Loading...</h2>;
+}
 
 
 export default App

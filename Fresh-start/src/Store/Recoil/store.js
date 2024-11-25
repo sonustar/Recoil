@@ -72,9 +72,11 @@ export const idAtom = atom({
 // You are making an atom family : 
 export const todoAtomfamily = atomFamily({
     key : "todoAtomfamily",
+    
     default : id => {
       // Frontend part 
       
       return TODOS.filter(x=> x.id === id )
     }
 })
+
